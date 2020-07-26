@@ -49,7 +49,7 @@ funcA()
 // Scopes can be linked. It depends how the code is implemented.
 // Check this two example below
 // 1 - Global lexical environment
-// Here all function has only access the variables of the global (Whatever function can call one another)
+// All functions has only access the variables of the global (Whatever function can call one another)
 var x = 'Some value'
 
 function funcA() {
@@ -61,10 +61,12 @@ function funcB() {
 }
 
 // 2 - Function lexical environment
-// Here a function have access the data of the another function
+// Here is a function that have access the data of the another function
 function main() {
     return function example() {
         console.log("Im' a function lexical environment in main")
     }
 }
 
+// [[scope]] 
+// Each function has it's own data '[[scope]]' that is create by the parser. (static scope)
