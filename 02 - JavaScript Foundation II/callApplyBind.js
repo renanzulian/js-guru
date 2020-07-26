@@ -32,3 +32,16 @@ sayThePreferredColor.apply(woman, ['red'])
 
 manColorPreferred = sayThePreferredColor.bind(man, 'black')
 manColorPreferred()
+
+// currying
+// a tip to work with bind
+
+function multiply(a, b) {
+    return a * b
+}
+
+const multiplyByTwo = multiply.bind(this, 2)
+const multiplyByTen = multiply.bind(this, 10)
+
+console.log(multiplyByTwo(5))
+console.log(multiplyByTen(5))
