@@ -32,7 +32,7 @@ console.log(myVar)
 
 var variable = 'An variable'
 
-function funcA(){
+function funcB(){
     var variable = 'Another'
     funcB()
 }
@@ -41,7 +41,7 @@ function funcB(){
     console.log(variable)
 }
 
-funcA()
+funcB()
 
 // Why it didn't printed? Because is the lexical scope that define the the available variables
 // and not the dynamic scope (where the function is called or by position in the call stack)
@@ -52,7 +52,7 @@ funcA()
 // All functions has only access the variables of the global (Whatever function can call one another)
 var x = 'Some value'
 
-function funcA() {
+function funcB() {
     console.log(x)
 }
 
