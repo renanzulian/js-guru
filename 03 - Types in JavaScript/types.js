@@ -26,3 +26,8 @@ Boolean(true).toString() // Something like this
 typeof Math // An standard built-in objects
 typeof Infinity // An standard built-in objects
 
+// Arrays
+// So if typeof an array is a object, How can we check if a variable is an array?
+// Use the standard built-in objects!
+Array.isArray([true, 10, 'Some data'])
+
